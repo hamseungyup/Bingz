@@ -764,14 +764,14 @@ async def on_message(msg):
 		##################################
 
 		for i in range(bossNum):
-			if message.content.startswith(bossData[i][0] +'컷'):
+			if message.content.startswith(bossData[i][0] +' 컷'):
 				if hello.find('  ') != -1 :
 					bossData[i][6] = hello[hello.find('  ')+2:]
 					hello = hello[:hello.find('  ')]
 				else:
 					bossData[i][6] = ''
 					
-				tmp_msg = bossData[i][0] +'컷'
+				tmp_msg = bossData[i][0] +' 컷'
 				if len(hello) > len(tmp_msg) + 3 :
 					if hello.find(':') != -1 :
 						chkpos = hello.find(':')
@@ -1339,15 +1339,10 @@ async def on_message(msg):
 			else :
 				information = '``` ```'
 
-			embed = discord.Embed(
-					title = "----- 고 정 보 스 -----",
-					description= fixed_information,
+		embed = discord.Embed(
+					title = "----- 보스탐 정보 -----",
+					description=information,
 					color=0x0000ff
-					)
-			embed.add_field(
-					name="----- 보스탐 정보 -----",
-					value= information,
-					inline = False
 					)
 			embed.add_field(
 					name="----- 미예약 보스 -----",
@@ -1367,24 +1362,7 @@ async def on_message(msg):
 
 		##################################
 
-		if message.content.startswith('!현재시간'):
-			now3 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
-			await client.get_channel(channel).send(now3.strftime('%Y-%m-%d') + '   ' + now3.strftime('%H:%M:%S'), tts=False)
-
-		if message.content.startswith('!리젠'):
-			embed = discord.Embed(
-					title='----- 리스폰 보스 -----',
-					description= ' ')
-			embed.add_field(name='1시간', value='기감', inline=False)
-			embed.add_field(name='2시간', value='서드,북드,카파,질풍,광풍,이프,자웜,개미', inline=False)
-			embed.add_field(name='3시간', value='중드,동드,거드,마요,산적,자크,스피,가스트,대흑장로', inline=False)
-			embed.add_field(name='4시간', value='아르,도펠', inline=False)
-			embed.add_field(name='5시간', value='에자', inline=False)
-			embed.add_field(name='6시간', value='감시자 데몬', inline=False)
-			embed.add_field(name='6시간 53분', value='피닉스', inline=False)
-			embed.add_field(name='7시간', value='데스나이트', inline=False)
-			embed.add_field(name='8시간', value='리칸트', inline=False)
-			embed.add_field(name='10시간', value='커츠', inline=False)
-			await client.get_channel(channel).send(embed=embed, tts=False)
+		
+		
 
 client.run(access_token)
