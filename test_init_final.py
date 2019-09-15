@@ -1340,14 +1340,9 @@ async def on_message(msg):
 				information = '``` ```'
 
 			embed = discord.Embed(
-					title = "----- 고 정 보 스 -----",
-					description= fixed_information,
+					title = "----- 보스탐 정보 -----",
+					description=information,
 					color=0x0000ff
-					)
-			embed.add_field(
-					name="----- 보스탐 정보 -----",
-					value= information,
-					inline = False
 					)
 			embed.add_field(
 					name="----- 미예약 보스 -----",
