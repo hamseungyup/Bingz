@@ -1007,11 +1007,6 @@ async def on_message(msg):
 					title = "----- 메뉴 -----",
 					description= '```!현재시간\n!채널확인\n!채널이동 [채널명]\n!소환\n!불러오기\n!초기화\n!명치\n!미예약\n!분배 [인원] [금액]\n!사다리 [뽑을인원수] [아이디1] [아이디2] ...\n!보스일괄 00:00 또는 !보스일괄 0000\n!ㅂ,ㅃ,q\n\n[보스명]컷\n[보스명]컷 00:00 또는 [보스명]컷 0000\n[보스명]멍\n[보스명]멍 00:00 또는 [보스명]멍 0000\n[보스명]예상 00:00 또는 [보스명]예상 0000\n[보스명]삭제\n보스탐```',
 					color=0xff00ff
-					)
-			embed.add_field(
-					name="----- 추가기능 -----",
-					value= '(보스명)컷/멍/예상  (할말) : 보스시간 입력 후 빈칸 두번!! 메모 가능'
-					)
 			await client.get_channel(channel).send(embed=embed, tts=False)
 
 		##################################
@@ -1362,24 +1357,6 @@ async def on_message(msg):
 
 		##################################
 
-		if message.content.startswith('!현재시간'):
-			now3 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
-			await client.get_channel(channel).send(now3.strftime('%Y-%m-%d') + '   ' + now3.strftime('%H:%M:%S'), tts=False)
-
-		if message.content.startswith('!리젠'):
-			embed = discord.Embed(
-					title='----- 리스폰 보스 -----',
-					description= ' ')
-			embed.add_field(name='1시간', value='기감', inline=False)
-			embed.add_field(name='2시간', value='서드,북드,카파,질풍,광풍,이프,자웜,개미', inline=False)
-			embed.add_field(name='3시간', value='중드,동드,거드,마요,산적,자크,스피,가스트,대흑장로', inline=False)
-			embed.add_field(name='4시간', value='아르,도펠', inline=False)
-			embed.add_field(name='5시간', value='에자', inline=False)
-			embed.add_field(name='6시간', value='감시자 데몬', inline=False)
-			embed.add_field(name='6시간 53분', value='피닉스', inline=False)
-			embed.add_field(name='7시간', value='데스나이트', inline=False)
-			embed.add_field(name='8시간', value='리칸트', inline=False)
-			embed.add_field(name='10시간', value='커츠', inline=False)
 			await client.get_channel(channel).send(embed=embed, tts=False)
 
 client.run(access_token)
