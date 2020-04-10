@@ -225,7 +225,7 @@ def init():
 		fc = tmp_command.split(',')
 		command.append(fc)
 		fc = []
-		#command.append(command_inputData[i][12:].rstrip('\r'))     #command[0] ~ [24] : 명령어
+		#command.append(command_inputData[i][12:].rstrip('\r'))     #command[0] ~ [2] : 명령어
 
 	################## 척살 명단 ###########################
 	for i in range(len(kill_inputData)):
