@@ -1498,8 +1498,8 @@ while True:
 			for command0 in command[0] :
 				if message.content == command0.strip():
 					command_list = ''
+					command_list += ','.join(command[6]) + '\n'     #!초기화
 					command_list += ','.join(command[20]) + '\n'     #보스탐
-					command_list += ','.join(command[21]) + '\n'     #!보탐
 					command_list += '[보스명]컷 또는 [보스명]컷 0000, 00:00\n'     
 					command_list += '[보스명]멍 또는 [보스명]멍 0000, 00:00\n'     
 					command_list += '[보스명]예상 또는 [보스명]예상 0000, 00:00\n' 
