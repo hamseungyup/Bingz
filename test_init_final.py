@@ -225,7 +225,7 @@ def init():
 		fc = tmp_command.split(',')
 		command.append(fc)
 		fc = []
-		#command.append(command_inputData[i][12:].rstrip('\r'))     #command[0] ~ [2] : 명령어
+		#command.append(command_inputData[i][12:].rstrip('\r'))     #command[0] ~ [24] : 
 
 	################## 척살 명단 ###########################
 	for i in range(len(kill_inputData)):
@@ -1498,8 +1498,8 @@ while True:
 			for command0 in command[0] :
 				if message.content == command0.strip():
 					command_list = ''
-					command_list += ','.join(command[1]) + '\n'     #보스탐
-					command_list += ','.join(command[2]) + '\n'     #!보스탐
+					command_list += ','.join(command[20]) + '\n'     #보스탐
+					command_list += ','.join(command[21]) + '\n'     #!보탐
 					command_list += '[보스명]컷 또는 [보스명]컷 0000, 00:00\n'     
 					command_list += '[보스명]멍 또는 [보스명]멍 0000, 00:00\n'     
 					command_list += '[보스명]예상 또는 [보스명]예상 0000, 00:00\n' 
