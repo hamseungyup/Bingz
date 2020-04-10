@@ -1498,33 +1498,8 @@ while True:
 			for command0 in command[0] :
 				if message.content == command0.strip():
 					command_list = ''
-					command_list += ','.join(command[1]) + '\n'     #!설정확인
-					command_list += ','.join(command[2]) + '\n'     #!채널확인
-					command_list += ','.join(command[3]) + ' [채널명]\n'     #!채널이동
-					command_list += ','.join(command[4]) + '\n'     #!소환
-					command_list += ','.join(command[5]) + '\n'     #!불러오기
-					command_list += ','.join(command[6]) + '\n'     #!초기화
-					command_list += ','.join(command[7]) + '\n'     #!명치
-					command_list += ','.join(command[8]) + '\n'     #!재시작
-					command_list += ','.join(command[9]) + '\n'     #!미예약
-					command_list += ','.join(command[10]) + ' [인원] [금액]\n'     #!분배
-					command_list += ','.join(command[11]) + ' [뽑을인원수] [아이디1] [아이디2]...\n'     #!사다리
-					command_list += ','.join(command[12]) + ' [아이디]\n'     #!정산
-					command_list += ','.join(command[13]) + ' 또는 ' + ','.join(command[13]) + ' 0000, 00:00\n'     #!보스일괄
-					command_list += ','.join(command[14]) + '\n'     #!q
-					command_list += ','.join(command[15]) + ' [할말]\n'     #!v
-					command_list += ','.join(command[16]) + '\n'     #!리젠
-					command_list += ','.join(command[17]) + '\n'     #!현재시간
-					command_list += ','.join(command[22]) + '\n'     #!킬초기화
-					command_list += ','.join(command[23]) + '\n'     #!킬횟수 확인
-					command_list += ','.join(command[23]) + ' [아이디]\n'     #!킬
-					command_list += ','.join(command[24]) + ' [아이디]\n'     #!킬삭제
-					command_list += ','.join(command[18]) + '\n'     #!공지
-					command_list += ','.join(command[18]) + ' [공지내용]\n'     #!공지
-					command_list += ','.join(command[18]) + '삭제\n'     #!공지
-					command_list += ','.join(command[19]) + ' [할말]\n\n'     #!상태
-					command_list += ','.join(command[20]) + '\n'     #보스탐
-					command_list += ','.join(command[21]) + '\n'     #!보스탐
+					command_list += ','.join(command[1]) + '\n'     #보스탐
+					command_list += ','.join(command[2]) + '\n'     #!보스탐
 					command_list += '[보스명]컷 또는 [보스명]컷 0000, 00:00\n'     
 					command_list += '[보스명]멍 또는 [보스명]멍 0000, 00:00\n'     
 					command_list += '[보스명]예상 또는 [보스명]예상 0000, 00:00\n' 
